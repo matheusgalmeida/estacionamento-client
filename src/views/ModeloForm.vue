@@ -5,20 +5,11 @@ export default defineComponent({
   name: 'cadastrarmodelo',
   components: {
   },
-});
+})
+
 </script>
 
 <template>
-  <form >
-    <img height="132px" width="132px" src="../assets/marca.png" alt=""/>
-    <div class="row">
-      <h1>Cadastrar Marca</h1>
-      <div class="col">
-        <input type="text" class="form-control" placeholder="Nome"  aria-label="Nome">
-      </div>
-    </div>  
-  </form>
-  <button type="submit" class="btn">Cadastrar</button>
 <form >
     <img height="132px" width="132px" src="../assets/modelo.png" alt=""/>
     <div class="row">
@@ -26,9 +17,14 @@ export default defineComponent({
       <div class="col">
         <input type="text" class="form-control" placeholder="Nome"  aria-label="Nome">
       </div>
-      <div class="col">
-        <input type="text" class="form-control" placeholder="Marca"  aria-label="Marca">
-      </div>
+    </div>
+    <div class="column is-offset-4 is-2" style="border-top-left-radius: 0px;">
+                <div class="select is-fullwidth">
+                    <select class="rounded " style="width: 252px; height: 38px; text-align: center;">
+                        <option hidden disabled selected> Selecione a Marca</option>
+                        <option></option>
+                    </select>
+                </div>
     </div>
     <button type="submit" class="btn">Cadastrar</button>
   </form>
@@ -59,6 +55,7 @@ h1 {
   color: #FFF;
   font-size: 16px;
   font-weight: 500;
+  margin-top: 20px;
 }
 
 .btn:hover{

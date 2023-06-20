@@ -20,6 +20,9 @@ export default defineComponent({
     <router-link to="/">Home</router-link>
     <router-link to="/cadastrarcondutor">Cadastrar Condutor</router-link>
     <router-link to="/cadastrarmodelo">Cadastrar Modelo</router-link>
+    <router-link to="/cadastrarmarca">Cadastrar Marca</router-link>
+    <router-link to="/cadastrarVeiculo">Cadastrar Veiculo</router-link>
+
   </div>
   </nav>
 <router-view/>
