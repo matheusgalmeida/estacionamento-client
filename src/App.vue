@@ -19,6 +19,7 @@ export default defineComponent({
   <div class="navbar">
     <router-link to="/">Home</router-link>
     <router-link to="/cadastrarcondutor">Cadastrar Condutor</router-link>
+    <router-link to="/cadastrarmodelo">Cadastrar Modelo</router-link>
   </div>
   </nav>
 <router-view/>
@@ -32,19 +33,26 @@ export default defineComponent({
   text-align: center;
   color: #2c3e50;
   max-width: 500px;
-  min-height: 100%;
+  height: 100vh;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 nav {
   background-color:none;
-  width: 100%;
-  height: 55px; 
+  position: fixed;
+  top: 0px;
+  width: 550px;
+  height: 55px;   
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 25px;
+  border-bottom: #35abe1 solid;
 a {
     font-size: 14px;
     font-weight: 400;

@@ -1,10 +1,16 @@
 <script lang="ts">
-import { Condutor } from '@/model/condutor';
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  name: 'cadastrarcondutor',
+  components: {
+  },
+});
+/*import { Condutor } from '@/model/condutor';
 import { CondutorCliente } from '@/client/condutor.client';
 import { Notification } from '@/model/notification'
 
 export default class condutorForm extends Condutor {
-
   public notification : Notification = new Notification()
   public condutor : Condutor = new Condutor
   public CondutorCliente! : CondutorCliente
@@ -35,35 +41,34 @@ export default class condutorForm extends Condutor {
   public onClickLimpar(): void {
     this.condutor = new Condutor()
   }
-  public setNotification(active: boolean, className: string, message: string): void {
-  this.notification = this.notification.new(active, className, message);
-}
-}
+}*/
 </script>
 
 <template>
-  <div class="columns" v-if="notification.ativo">
+  <!--<div class="columns" v-if="notification.ativo">
     <div class="column is-12">
       <div :class="notification.classe">
       <button @click="onClickFecharNotificacao()" class="delete" ></button>
         {{ notification.mensagem }}
       </div>
     </div>
-  </div>
+  </div>-->
 
   <form >
+    <img height="132px" width="132px" src="../assets/condutor.png" alt=""/>
     <div class="row">
+      <h1>Cadastrar condutor</h1>
       <div class="col">
-        <input type="text" class="form-control" placeholder="Nome" v-model="condutor.nome" aria-label="Nome">
+        <input type="text" class="form-control" placeholder="Nome"  aria-label="Nome">
       </div>
       <div class="col">
-        <input type="text" class="form-control" placeholder="Telefone" v-model="condutor.telefone" aria-label="Telefone">
+        <input type="text" class="form-control" placeholder="Telefone"  aria-label="Telefone">
       </div>
       <div class="col">
-        <input type="text" class="form-control" placeholder="CPF" v-model="condutor.cpf" aria-label="CPF">
+        <input type="text" class="form-control" placeholder="CPF"  aria-label="CPF">
       </div>
     </div>
-    <button type="submit" class="btn" @click="onClickCadastrar()">Cadastrar</button>
+    <button type="submit" class="btn">Cadastrar</button>
   </form>
 </template>
 
@@ -75,7 +80,14 @@ export default class condutorForm extends Condutor {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 15px;
-  }
+}
+
+h1 { 
+  font-size: 24px;
+  color: #35abe1;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+}
 .col {
   margin-top: 12px;
 }
@@ -90,4 +102,6 @@ export default class condutorForm extends Condutor {
 .btn:hover{
   transform: scale(1.05);
 }
+
+
 </style>
