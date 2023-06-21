@@ -18,17 +18,18 @@ export default defineComponent({
   </router-link>
   <div class="navbar">
     <router-link to="/">Home</router-link>
-    <router-link to="/cadastrarcondutor">Cadastrar Condutor</router-link>
-    <router-link to="/cadastrarmodelo">Cadastrar Modelo</router-link>
-    <router-link to="/cadastrarmarca">Cadastrar Marca</router-link>
-    <router-link to="/cadastrarVeiculo">Cadastrar Veiculo</router-link>
-
+    <router-link to="/condutor/listar">Condutor</router-link>
+    <router-link to="/modelo">Modelo</router-link>
+    <router-link to="/marca">Marca</router-link>
+    <router-link to="/Veiculo">Veiculo</router-link>
+    
   </div>
   </nav>
 <router-view/>
 </template>
 
 <style lang="scss">
+@import "../node_modules/bootstrap/scss/bootstrap";
 #app {
   font-family: -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ,Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

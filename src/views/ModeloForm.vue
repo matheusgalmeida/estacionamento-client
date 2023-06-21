@@ -26,8 +26,12 @@ export default defineComponent({
                     </select>
                 </div>
     </div>
-    <button type="submit" class="btn">Cadastrar</button>
   </form>
+  <div class="btn-wrapper">
+      <button type="submit" class="btn">Cadastrar</button>
+      <button type="submit" class="btn">Voltar</button>
+
+    </div>
 </template>
 
 <style scoped lang="scss">

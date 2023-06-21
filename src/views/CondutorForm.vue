@@ -68,8 +68,16 @@ export default class condutorForm extends Condutor {
         <input type="text" class="form-control" placeholder="CPF"  aria-label="CPF">
       </div>
     </div>
-    <button type="submit" class="btn">Cadastrar</button>
+    <div class="btn-wrapper">
+    <router-link to="">
+      <button type="submit" class="btn">Cadastrar</button>
+    </router-link>
+    <router-link to="/condutor/listar">
+      <button type="submit" class="btn">Voltar</button>
+    </router-link>
+  </div>
   </form>
+
 </template>
 
 <style scoped lang="scss">
@@ -80,6 +88,12 @@ export default class condutorForm extends Condutor {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 { 
@@ -101,6 +115,13 @@ h1 {
 
 .btn:hover{
   transform: scale(1.05);
+}
+
+.btn-wrapper {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 
